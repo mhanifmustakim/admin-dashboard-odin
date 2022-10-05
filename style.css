@@ -33,7 +33,7 @@ img.profile-picture {
 }
 
 #page-container {
-    width: 100vw;
+    max-width: 100vw;
     height: max(100vh, 100%);
     min-height: 100vh;
     display: grid;
@@ -241,4 +241,56 @@ img.profile-picture {
     grid-area: 1 / 1 /span 2/ span 1;
     width: 4em;
     padding-right: 0.5em;
+}
+
+@media screen and (max-width: 1439px) {
+    #main {
+        grid-template-rows: auto auto 1fr;
+    }
+
+    #projects .card {
+        min-height: 20vh;
+    }
+
+    #announcements .card {
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #page-container {
+        background-color: var(--main-color);
+        min-width: 100vw;
+        grid-template: auto 1fr / 4rem 1fr;
+        grid-template-areas:
+            ". header"
+            ". main";
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 100vh;
+        width: 4rem;
+        z-index: 2;
+        padding: 1rem 0.5rem;
+        justify-items: center;
+        grid-template-rows: repeat(3, auto) 1fr;
+        gap: 1rem;
+        box-shadow: 0 100% 0 -5rem var(--main-color);
+    }
+
+    #navbar>ul {
+        padding-left: 0;
+    }
+
+    #navbar>ul:last-child {
+        margin-top: 3rem;
+    }
+
+    .nav-link {
+        display: none;
+        opacity: 0;
+    }
 }
