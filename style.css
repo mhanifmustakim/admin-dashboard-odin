@@ -255,6 +255,10 @@ img.profile-picture {
     #announcements .card {
         margin: 1rem;
     }
+
+    #trending .card {
+        margin: 0.5rem 1rem;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -273,7 +277,7 @@ img.profile-picture {
         left: 0px;
         height: 100vh;
         width: 4rem;
-        z-index: 2;
+        z-index: 5;
         padding: 1rem 0.5rem;
         justify-items: center;
         grid-template-rows: repeat(3, auto) 1fr;
@@ -283,6 +287,7 @@ img.profile-picture {
 
     #navbar>ul {
         padding-left: 0;
+        margin-top: 1rem;
     }
 
     #navbar>ul:last-child {
